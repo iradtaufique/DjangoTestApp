@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>welcome</h1>
+<a href="{% url 'newuser' %}">Create new User</a>
+<hr>
+<a href="{% url 'login' %}">login</a>
+<hr>
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}">logout</a>
+{% endif %}
+</body>
+</html>
